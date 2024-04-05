@@ -1,0 +1,932 @@
+.clock-section {
+    position: relative;
+    background-color: #565252;
+    display: flex;
+    height: 50vh;
+}
+
+.clock-animation {
+    font-family: Arial, sans-serif;
+    font-size: 47px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    animation: reveal 2s ease forwards;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.o-container {
+    position: relative;
+}
+
+.o-clock {
+    width: 40px;
+    height: 40px;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transform-origin: center;
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.hour-hand {
+    animation: rotateHour 12h linear infinite;
+}
+
+.minute-hand {
+    animation: rotateMinute 60min linear infinite;
+}
+
+.second-hand {
+    animation: rotateSecond 60s steps(60) infinite;
+}
+
+@keyframes reveal {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateHour {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateMinute {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateSecond {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* CSS */
+
+.video-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #fff; /* Ensure the title is visible against the background */
+    position: relative;
+    z-index: 2; /* Ensure the title appears above the clock animation */
+}
+
+
+
+.video-section {
+    height: 100vh; /* Set the height to fill the viewport */
+    position: relative;
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px; /* Pas de maximale breedte van het logo aan */
+    height: auto; /* Zorg ervoor dat de hoogte automatisch wordt aangepast om de verhoudingen te behouden */
+
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section .container {
+    width: 100%;
+}
+
+
+.heading {
+    width: 100%;
+    min-width: 300px;
+    text-align: center;
+    padding: 0rem;
+    padding-top: 2rem;
+}
+
+
+section .box {
+    max-width: 50%;
+    min-width: 300px;
+}
+
+section .box2 {
+    margin-right: 20vh;
+}
+
+.bg-light {
+    background-color: #ffffff;
+}
+
+.bg-light .heading h2 {
+    color: #000;
+}
+.bg-light .title {
+    padding-top: 8vh;
+    color: #111;
+}
+.bg-light p {
+    color: #333;
+}
+
+.bg-dark {
+    background-color: #111;
+}
+
+.bg-dark .heading h2 {
+    color: #ffff;
+}
+.bg-dark .title {
+    color: #fff;
+}
+.bg-dark p {
+    color: #aaa;
+}
+
+
+/* ======= About style ======= */
+
+
+.about-img {
+    margin-top: 10vh;
+    width: 50%;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img .img:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 45px;
+    bottom: 0;
+    background-color: #2b2b2b;
+    border-radius: 3vh;
+}
+.about-img .img:after {
+    content: '';
+    width: 50%;
+    position: absolute;
+    top: -8%;
+    bottom: 55%;
+    left: -5%;
+    background-image: url(./images/dots.png);
+    background-repeat: repeat;
+    z-index: 0;
+}
+
+.about-img .img {
+    width: 300px;
+    padding: 0 30px 30px 15px;
+    position: relative;
+}
+
+.about-img .img img {
+    position: relative;
+    z-index: 2;
+    background: #1b1b1b;
+    height: 300px;
+    border-radius: 3vh;
+}
+
+.about-img img:hover {
+    transform: scale(0.95);
+}
+
+
+.about ul {
+    padding: 1rem 0rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.about ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.about ul li i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
+    font-size: 12px;
+}
+
+.about ul span {
+    color: #333;
+}
+
+.about-bottom {
+
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+    border-top: 1px solid #f1f1f1;
+    padding: 1rem;
+}
+
+.signature {
+    width: 80px;
+}
+
+
+
+/* ======= services style ======= */
+
+.services .container {
+    justify-content: flex-start;
+    gap: 0px;
+
+}
+
+.services .box {
+    width: 33%;
+    min-width: 300px;
+}
+
+
+.services .box .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+
+.services .box .item img {
+    width: fit-content;
+    height: 60px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.services .box .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+.services .box .item h6 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+}
+
+.services .box .item p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #f1f1f1;
+}
+
+
+.border-01 {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-02 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-03 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-04 {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+}
+
+.border-05 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-06 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+
+}
+
+
+.gallery ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.gallery li{
+    font-size: 14px;
+    line-height: 21px;
+    color: #999;
+    cursor: pointer;
+}
+.gallery .active,
+    .gallery li:hover{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.grid-wrapper {
+    margin-top: 5vh;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+
+.grid-wrapper img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Main CSS */
+.grid-wrapper .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+
+
+
+.contact {
+    position: relative;
+}
+
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact ul li{
+    font-size: 18px;
+    color: #333;
+}
+.contact ul span {
+    font-size: 16px;
+    color: #333;
+    padding: 0px 4px;
+}
+.contact .form-title {
+    font-size: 18px;
+    color: #c89c9c;
+}
+
+
+
+.contact .box-r {
+    position: relative;
+}
+
+.contact .box-r .form-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #262626;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 1rem;
+    border-radius: 3vh;
+}
+
+.contact .box-r:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: rgba(0, 0, 0, 0.42);
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    border-radius: 3vh;
+}
+
+.box-r:after {
+    content: '';
+    width: 50%;
+    position: absolute;
+    top: -8%;
+    bottom: 55%;
+    left: -5%;
+    background-image: url(./images/dots.png);
+    background-repeat: repeat;
+    z-index: 0;
+}
+
+.contact .form-box h2 {
+    font-size: 22px;
+    color: #fffefe;
+}
+
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.contact .one-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+.contact .box-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0rem;
+    border-bottom: 1px solid #fff;
+    border-radius: 1px;
+}
+
+.contact .box-input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.66rem;
+}
+
+.contact .box-input i {
+    color: #ffffff;
+}
+
+.contact .box-input textarea,
+.contact .box-input input {
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.contact .box-input textarea {
+    padding-left: 1rem;
+    margin-top: 0.351rem;
+}
+
+.contact .box-input textarea::placeholder,
+.contact .box-input input::placeholder {
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+
+.btn-send {
+    background-color: #fffefe;
+    color: #0b0b0b;
+    padding: 0.75rem 1rem;
+    border-radius: 10vh;
+    border: none;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Afgeronde hoeken toevoegen */
+    transition: transform 0.3s ease; /* Overgangseffect toevoegen */
+}
+
+.image:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding bij hover */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Optioneel: Stijl toevoegen voor de afbeeldingtekst */
+.image .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.3s ease;
+}
+
+.image:hover .text {
+    bottom: -40px; /* Verschuif de tekst naar boven bij hover */
+}
+
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    margin-right: 50px; /* Ruimte tussen afbeelding en tekst */
+    margin-left: 10px; /* Ruimte tussen afbeelding en tekst */
+}
+
+.text {
+    flex: 1;
+}
+
+.text h3 {
+    margin-top: 0; /* Voorkom standaard marges */
+}
+
+.text p {
+    margin-bottom: 10; /* Voorkom standaard marges */
+}
+
+.bio {
+    display: flex;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.centreer {
+    display: flex;
+    text-align: center;
+}
+
+.sponsor-bar {
+    background-color: #ccc; /* Gray background color */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999; /* Ensure it's on top of other elements */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+.sponsor-bar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Stijlen voor de balk over de hele breedte */
+/* Stijlen voor de balk over de hele breedte */
+/* Stijlen voor de balk over de hele breedte */
+.full-width-bar {
+    position: relative; /* Zorg ervoor dat de positie relatief is voor het absolute positioneren van de handtekening */
+    background-color: rgb(69, 67, 67); /* Achtergrondkleur van de balk */
+    height: 18vh;
+    color: white; /* Tekstkleur van de inhoud van de balk */
+    padding: 20px 0; /* Ruimte boven en onder de inhoud van de balk */
+    text-align: center; /* Centreer de inhoud van de balk */
+    width: 100%; /* Volledige breedte van het scherm */
+    box-sizing: border-box; /* Behoudt de volledige breedte inclusief padding */
+}
+
+.about-img {
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    height: 400px; /* Pas de hoogte naar wens aan */
+}
+
+.img {
+    width: 80%; /* Pas de breedte naar wens aan */
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.centered-title {
+    text-align: center;
+    margin-top: 30px; /* Je kunt dit aanpassen aan je voorkeur */
+}
+
+.container ul li a {
+    color: white;
+    text-decoration: none; /* Optioneel: om onderstreping te verwijderen */
+}
+
+/* CSS-stijl voor cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.footer .box h2 {
+    font-size: 34px; /* Pas aan naar gewenste grootte */
+}
+
+.btn-send {
+    margin-top: 2vh;
+    background-color: #575757;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-send:hover {
+    background-color: #9c9fa2;
+}
+
+.btn-send.active {
+    background-color: #bbbec1;
+}
+
+/* Stijlen voor de pop-up */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none; /* verberg standaard de pop-up */
+}
+
+/* Stijlen voor de overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; /* verberg standaard de overlay */
+}
+
+/* Stijlen voor knop met hover effect */
+.form button:hover {
+    cursor: pointer;
+    background-color: #403f3f;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #403f3fdc;
+}
+
+li i:hover {
+    color: #007bff; /* Kleur veranderen naar gewenste kleur */
+}
+
+li span:hover {
+    color: #007bff; /* Kleur veranderen naar gewenste kleur */
+}
+
+.box li:hover span {
+    color: #007bff; /* Kleur veranderen naar gewenste kleur */
+}
+
+.box li a:hover {
+    color: #fff; /* Tekstkleur veranderen naar wit */
+    text-decoration: underline; /* Onderlijning toevoegen */
+}
+
+.box ul li a:hover {
+    color: #fff; /* Tekstkleur veranderen naar wit */
+    text-decoration: underline; /* Onderlijning toevoegen */
+}
+
+.menu-links li a:hover {
+    color: #ffffff; /* Tekstkleur veranderen naar wit */
+    text-decoration: underline; /* Onderlijning toevoegen */
+}
+
+.custom-span:hover {
+    color: inherit; /* Gebruik de standaardtekstkleur */
+    text-decoration: none; /* Geen onderlijning bij hover */
+}
+
+.navbar-links {
+    display: none;
+}
+
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Afstand tussen de vakken */
+}
+
+.services .box {
+    flex: 0 0 calc(33.33% - 40px); /* Breedte van elk vak, met wat ruimte aan beide zijden */
+    max-width: calc(33.33% - 40px); /* Maximale breedte van elk vak */
+}
+
+/* Stijl voor de onderstrepingseffecten */
+.navbar-links .nav-link {
+    position: relative; /* Zorg ervoor dat de positie relatief is voor de pseudo-elementen */
+    color: #333; /* Kleur van de link */
+    text-decoration: none; /* Geen standaard onderstreping */
+    transition: color 0.3s; /* Soepele overgang voor de kleur van de link */
+}
+
+.navbar-links .nav-link::after {
+    content: ''; /* Voeg een pseudo-element toe */
+    position: absolute; /* Zorg ervoor dat het pseudo-element absoluut gepositioneerd is */
+    left: 0; /* Plaats het onderstrepingseffect aan de linkerkant */
+    bottom: -5px; /* Plaats het net onder de link */
+    width: 100%; /* Maak het even breed als de link */
+    height: 2px; /* Hoogte van de onderstreping */
+    background-color: transparent; /* Maak de onderstreping eerst transparant */
+    transition: background-color 0.3s, width 0.3s, bottom 0.3s; /* Soepele overgang voor de achtergrondkleur, breedte en positie */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); /* Voeg een subtiele schaduw toe aan de onderstreping */
+}
+
+.navbar-links .nav-link:hover::after {
+    bottom: -2px; /* Verschuif het onderstrepingseffect omhoog wanneer er over de link wordt gehoverd */
+    width: calc(100% - 20px); /* Verklein de breedte van de onderstreping */
+    background-color: #fff; /* Verander de achtergrondkleur van de onderstreping */
+}
+
+
+
+/* Stijlen voor de desktopversie (schermen groter dan 768px) */
+/* Plaats hier stijlen die alleen van toepassing moeten zijn op desktops */
+.services .heading {
+    margin-top: 10vh;
+    padding: 0 20px; /* Voeg 20px padding toe aan beide zijden van de heading */
+    box-sizing: border-box; /* Zorg ervoor dat de padding wordt opgenomen in de totale breedte van de heading */
+}
+
+/* Stijlen voor mobiele apparaten (schermen kleiner dan of gelijk aan 768px) */
+/* Stijlen voor mobiele apparaten (schermen kleiner dan of gelijk aan 768px) */
+
+
+
+@media only screen and (max-width: 768px) {
+    .logo-wrapper::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* Afstand tussen logo en balkje aanpassen indien nodig */
+        width: 100%;
+        height: 3px; /* Hoogte van het balkje aanpassen indien nodig */ 
+    }
+
+    .navbar .navbar-links {
+        display: none;
+    }
+
+    .introductie  {
+        color: white;
+    }
+    .header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }    
+    .services .box {
+        flex: 0 0 calc(50% - 30px); /* Op kleinere schermen, neemt elk vak 50% van de breedte */
+        max-width: calc(50% - 30px); /* Maximale breedte van elk vak op kleinere schermen */
+    }
+
+    .clock-animation {
+        margin-left: -40px; /* Pas de negatieve marge aan om de klok naar links te verplaatsen */
+    }
+}
+
+/* Stijlen voor de desktopversie (schermen groter dan 768px) */
+/* Plaats hier stijlen die alleen van toepassing moeten zijn op desktops */
+.services .heading {
+    margin-top: 10vh;
+    padding: 0 20px; /* Voeg 20px padding toe aan beide zijden van de heading */
+    box-sizing: border-box; /* Zorg ervoor dat de padding wordt opgenomen in de totale breedte van de heading */
+}
+
+.box {
+    border: none; /* Verwijder de randen rondom de boxes op mobiele apparaten */
+}
+
+h4 {
+    display: none;
+}
+
+.contact {
+    margin-top: 50px; /* Voeg 50px ruimte toe boven de contactsectie */
+    margin-bottom: 50px; /* Voeg 50px ruimte toe onder de contactsectie */
+}
+
+/* Voeg meer ruimte toe boven en onder de box2 */
+.box2 {
+    margin-top: 50px; /* Voeg 50px ruimte toe boven de box2 */
+    margin-bottom: 50px; /* Voeg 50px ruimte toe onder de box2 */
+}
+
